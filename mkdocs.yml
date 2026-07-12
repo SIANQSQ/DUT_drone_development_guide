@@ -232,32 +232,58 @@ theme:
   name: readthedocs
 nav:
   - 首页: index.md
-  - 快速开始: start.md
-  - 机械结构:
+  - 快速开始: # quickly_start
+    - 环境部署: quickly_start/environment.md
+    - 仿真: quickly_start/simulation.md
+    - 实机: quickly_start/real_machine.md
+  - 机械结构: # mechnical
     - 机体结构: mechanical/airframe.md
     - 云台: mechanical/gimbal.md
     - 机载计算机: mechanical/onboard-computer.md
-  - 硬件配置:
-    - 无人机飞控硬件: 
-      - CUAV X25 EVO: hardware/cuav-x25-evo.md
-      - 电调: hardware/esc.md
-      - 电机: hardware/motor.md
-      - RTK: hardware/rtk.md
-      - 激光雷达: hardware/lidar.md
-      - 舵机控制板: hardware/i2c.md
-      - 舵机投放器: hardware/rtk.md
-    - 机载计算机:
-      - Jetson Orin NX:
-        - 引导烧录: hardware/jetson-orin-nx/boot.md
-        - 系统安装: hardware/jetson-orin-nx/install.md
-  - 软件配置:
-    - 系统安装: software/system-install.md
-    - ROS安装: software/ros2-install.md
-    - 任务控制器: software/task-controller.md
-    - 软件功能包:
-      - 无人机状态机: software/packages/state-machine.md
-      - PX4接口: software/packages/px4-interface.md
-      - 瞄准与跟踪: software/packages/aiming-tracking.md
-      - 侦察: software/packages/position-publish.md
-      - 投放: software/packages/position-publish.md
-      - 位置发布: software/packages/position-publish.md
+  - 硬件配置: # hardware
+    - 无人机飞控硬件: # flight_controller
+      - CUAV X25 EVO: hardware/flight_controller/cuav-x25-evo.md
+      - PMU Lite: hardware/flight_controller/pmu-lite.md
+      - 数传电台: hardware/flight_controller/telemetry.md
+      - 电调: hardware/flight_controller/esc.md
+      - 电机: hardware/flight_controller/motor.md
+      - RTK: hardware/flight_controller/rtk.md
+      - 激光雷达: hardware/flight_controller/lidar.md
+      - 舵机控制板: hardware/flight_controller/servo-controller.md
+      - 舵机投放器: hardware/flight_controller/servo-dispenser.md
+    - 电池: # battery
+      - 50PL_6S2P: hardware/battery/50PL_6S2P.md
+      - 格氏电池: hardware/battery/geshi_battery.md
+    - 机载计算机: # computer
+        - Jetson Orin NX: hardware/computer/jetson-orin-nx.md
+    - 电源树: # power_tree
+      - 电源树设计: hardware/power_tree/power-tree-design.md
+      - 电源树连接: hardware/power_tree/power-tree-connection.md
+    - 线路连接: # wiring
+      - 线路连接图: hardware/wiring/wiring-diagram.md
+      - 线路连接说明: hardware/wiring/wiring-instruction.md
+  - 机载计算机配置: # jetson
+    - 引导烧录: jetson/boot.md
+    - 系统安装: jetson/system-install.md
+    - ROS安装: jetson/ros-install.md
+    - 任务控制器: jetson/task-controller.md
+  - 软件功能包: # software/px4_controller
+    - 无人机状态机: software/px4_controller/state-machine.md
+    - PX4接口: software/px4_controller/px4-interface.md
+    - 瞄准与跟踪: software/px4_controller/aiming-tracking.md
+    - 侦察: software/px4_controller/detection.md
+    - 投放: software/px4_controller/throw.md
+    - 位置发布: software/px4_controller/position-publish.md
+  - 自定义地面站软件:
+    - QSQ Groundcontrol:
+      - 软件简介: software/QSQ_Groundcontrol/introduction.md
+      - 软件安装: software/QSQ_Groundcontrol/install.md
+      - 软件使用: software/QSQ_Groundcontrol/use.md
+      - 更新日志: software/QSQ_Groundcontrol/changelog.md
+      - 自定义开发: 
+        - 源码获取: software/QSQ_Groundcontrol/development.md
+        - 编译环境配置: software/QSQ_Groundcontrol/development-env.md
+        - 编译与运行: software/QSQ_Groundcontrol/development-build.md
+        - 打包与发行: software/QSQ_Groundcontrol/development-package.md
+    - 无人机控制台: software/upper_machine/drone-console.md
+    - 数据遥测: software/upper_machine/data-telemetry.md
