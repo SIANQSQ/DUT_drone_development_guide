@@ -1,151 +1,133 @@
 # ============================================================
 # 站点基本信息
 # ============================================================
-# 【必填】站点的主标题[reference:0]
 site_name: DUT Drone Development Guide
-# 站点的规范URL，用于SEO，本地开发时可留空[reference:1]
 site_url: https://qsq.cool
-# 站点描述，将生成HTML的meta标签[reference:2]
 site_description: DUT Drone Development Guide
-# 站点作者，将生成HTML的meta标签[reference:3]
 site_author: DUT Aeromodelling Association - Shengqiao Qu
-# 站点图标，将文件放在docs目录下[reference:4]
 site_favicon: favicon.ico
 
 # ============================================================
 # 仓库与编辑链接
 # ============================================================
-# 你的GitHub仓库地址，会在页面上生成仓库链接[reference:5]
 repo_url: https://github.com/SIANQSQ/Drone_Task_Controller.git
-# 仓库显示名称，默认从repo_url自动解析[reference:6]
 repo_name: GitHub
-# 编辑路径，用于生成"编辑此页"链接[reference:7]
-# 对于GitHub，通常设置为 'blob/main/docs/'
 edit_uri: blob/main/docs/
 
 # ============================================================
 # 主题配置 (Material for MkDocs)
 # ============================================================
 theme:
-  # 主题名称[reference:8]
   name: material
-  # 自定义覆盖目录，用于存放自定义HTML/CSS模板
   custom_dir: overrides
+  language: zh
 
   # --- 颜色方案 ---
-  # 支持明暗两种配色方案，并允许用户切换
   palette:
-    # 亮色模式
-    - scheme: default
-      primary: indigo      # 主色，可选：red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue grey, black, white
-      accent: indigo       # 强调色
-      toggle:
-        icon: material/brightness-7
-        name: 切换到暗色模式
-    # 暗色模式
+    # 始终使用深色方案
     - scheme: slate
       primary: indigo
       accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: 切换到亮色模式
 
   # --- 字体设置 ---
   font:
-    # 正文字体
     text: Roboto
-    # 代码块字体
     code: Roboto Mono
 
   # --- 界面功能 ---
-  # 显示页面目录（TOC）
   features:
-    # 导航标签（顶部标签式导航）
     - navigation.tabs
-    # 导航标签会 sticky 在顶部
     - navigation.tabs.sticky
-    # 导航展开（侧边栏所有层级默认展开）
     - navigation.expand
-    # 导航索引（将章节首页整合进导航）
     - navigation.indexes
-    # 导航顶部（返回顶部按钮）
     - navigation.top
-    # 搜索高亮（高亮搜索关键词）
     - search.highlight
-    # 搜索共享（在页面间共享搜索状态）
     - search.share
-    # 搜索建议（提供搜索建议）
     - search.suggest
-    # 页眉自动隐藏（滚动时自动隐藏页眉）
     - header.autohide
-    # 锚点跟踪（滚动时高亮当前章节）
     - toc.follow
-    # 内容标签（为内容添加标签功能）
     - content.tabs.link
-    # 代码注释（在代码块中添加注释）
     - content.code.annotate
-    # 复制代码按钮
     - content.code.copy
-    # 工具提示（为链接等元素添加工具提示）
     - content.tooltips
 
-  # --- 语言设置 ---
-  # 界面语言，'zh' 为简体中文[reference:16]
-  language: zh
+  # --- Material 主题图标 ---
+  icon:
+    repo: fontawesome/brands/github
+  logo: assets/logo.svg
+
+# ============================================================
+# 导航结构
+# ============================================================
+nav:
+  - 首页: index.md
+  - 快速开始:
+    - 环境部署: quickly_start/environment.md
+    - 仿真: quickly_start/simulation.md
+    - 实机: quickly_start/real_machine.md
+  - 机械结构:
+    - 机体结构: mechanical/airframe.md
+    - 云台: mechanical/gimbal.md
+    - 机载计算机: mechanical/onboard-computer.md
+  - 硬件配置:
+    - 无人机飞控硬件:
+      - CUAV X25 EVO: hardware/flight_controller/cuav-x25-evo.md
+      - PMU Lite: hardware/flight_controller/pmu-lite.md
+      - 数传电台: hardware/flight_controller/telemetry.md
+      - 电调: hardware/flight_controller/esc.md
+      - 电机: hardware/flight_controller/motor.md
+      - RTK: hardware/flight_controller/rtk.md
+      - 激光雷达: hardware/flight_controller/lidar.md
+      - 舵机控制板: hardware/flight_controller/servo-controller.md
+      - 舵机投放器: hardware/flight_controller/servo-dispenser.md
+    - 电池:
+      - 50PL_6S2P: hardware/battery/50PL_6S2P.md
+      - 格氏电池: hardware/battery/geshi_battery.md
+    - 机载计算机:
+        - Jetson Orin NX: hardware/computer/jetson-orin-nx.md
+    - 电源树:
+      - 电源树设计: hardware/power_tree/power-tree-design.md
+      - 电源树连接: hardware/power_tree/power-tree-connection.md
+    - 线路连接:
+      - 线路连接图: hardware/wiring/wiring-diagram.md
+      - 线路连接说明: hardware/wiring/wiring-instruction.md
+  - 机载计算机配置:
+    - 引导烧录: jetson/boot.md
+    - 系统安装: jetson/system-install.md
+    - ROS安装: jetson/ros-install.md
+    - 任务控制器: jetson/task-controller.md
+  - 软件功能包:
+    - 无人机状态机: software/px4_controller/state-machine.md
+    - PX4接口: software/px4_controller/px4-interface.md
+    - 瞄准与跟踪: software/px4_controller/aiming-tracking.md
+    - 侦察: software/px4_controller/detection.md
+    - 投放: software/px4_controller/throw.md
+    - 位置发布: software/px4_controller/position-publish.md
+  - 自定义地面站软件:
+    - QSQ Groundcontrol:
+      - 软件简介: software/QSQ_Groundcontrol/introduction.md
+      - 软件安装: software/QSQ_Groundcontrol/install.md
+      - 软件使用: software/QSQ_Groundcontrol/use.md
+      - 更新日志: software/QSQ_Groundcontrol/changelog.md
+      - 自定义开发:
+        - 源码获取: software/QSQ_Groundcontrol/development.md
+        - 编译环境配置: software/QSQ_Groundcontrol/development-env.md
+        - 编译与运行: software/QSQ_Groundcontrol/development-build.md
+        - 打包与发行: software/QSQ_Groundcontrol/development-package.md
+    - 无人机控制台: software/upper_machine/drone-console.md
+    - 数据遥测: software/upper_machine/data-telemetry.md
 
 # ============================================================
 # 插件配置
 # ============================================================
 plugins:
-  # 搜索插件（MkDocs内置）[reference:17]
   - search:
-      # 语言设置，支持中文分词
       lang: zh
-  # 代码高亮插件（MkDocs内置）
   - i18n:
-      # 国际化支持，如果不需要可移除
       default_language: zh
       languages:
         zh: 中文
         en: English
-  # 自动生成API文档（从源代码docstring）
-  # - mkdocstrings:
-  #     default_handler: python
-  #     handlers:
-  #       python:
-  #         options:
-  #           docstring_style: google
-  #           show_source: true
-  # 在构建时编程式地生成页面
-  # - gen-files
-  # # 在Markdown中定义导航
-  # - literate-nav:
-  #     nav_file: SUMMARY.md
-  # # 在页面中包含其他Markdown文件片段[reference:21]
-  # - snippets:
-  #     base_path: docs
-  # # 博客插件（如果不需要可移除）
-  # - blog:
-  #     blog_dir: blog
-  #     post_dir: posts
-  #     post_date_format: yyyy-MM-dd
-  #     post_url_format: "{date}/{slug}"
-  #     authors_file: authors.yml
-
-# ============================================================
-# 导航结构 (自动生成 或 手动定义)
-# ============================================================
-# 如果启用了 literate-nav 插件，下面的 nav 配置将被忽略。
-# 你需要在 docs/ 目录下创建 SUMMARY.md 文件来定义导航。
-# 如果希望手动定义导航，可以取消下面的注释并移除 literate-nav 插件：
-# nav:
-#   - 首页: index.md
-#   - 快速开始: getting-started.md
-#   - 用户指南:
-#       - 安装: user-guide/installation.md
-#       - 配置: user-guide/configuration.md
-#   - API参考: api/
-#   - 关于: about.md
 
 # ============================================================
 # 扩展CSS与JavaScript
@@ -157,18 +139,14 @@ extra_javascript:
   - javascripts/extra.js
 
 # ============================================================
-# 额外配置（用于模板变量）
+# 额外配置
 # ============================================================
 extra:
-  # 社交链接，会显示在页面底部
+  generator: false
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/SIANQSQ/Drone_Task_Controller.git
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/your-username
-  # 版权信息
   copyright: Copyright &copy; 2026 DUT Aeromodelling Association - Shengqiao Qu
-  # 分析代码（如Google Analytics）
   analytics:
     provider: google
     property: G-XXXXXXXXXX
@@ -176,22 +154,16 @@ extra:
 # ============================================================
 # 构建与预览设置
 # ============================================================
-# 文档源文件目录[reference:22]
 docs_dir: docs
-# 构建输出目录
 site_dir: site
-# 开发服务器地址[reference:23]
 dev_addr: 127.0.0.1:8000
-# 是否严格模式（构建时将所有警告视为错误）
 strict: false
-# 是否使用目录URLs（例如 '/about/' 而不是 '/about.html'）
 use_directory_urls: true
 
 # ============================================================
 # Markdown扩展配置
 # ============================================================
 markdown_extensions:
-  # 内置扩展
   - toc:
       permalink: true
   - tables
@@ -220,70 +192,3 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
-# ============================================================
-# 验证与Schema支持（可选）
-# ============================================================
-# 为IDE提供配置文件的自动补全和验证[reference:24]
-# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
-
-site_name: DUT Drone Development Guide
-theme:
-  name: readthedocs
-nav:
-  - 首页: index.md
-  - 快速开始: # quickly_start
-    - 环境部署: quickly_start/environment.md
-    - 仿真: quickly_start/simulation.md
-    - 实机: quickly_start/real_machine.md
-  - 机械结构: # mechnical
-    - 机体结构: mechanical/airframe.md
-    - 云台: mechanical/gimbal.md
-    - 机载计算机: mechanical/onboard-computer.md
-  - 硬件配置: # hardware
-    - 无人机飞控硬件: # flight_controller
-      - CUAV X25 EVO: hardware/flight_controller/cuav-x25-evo.md
-      - PMU Lite: hardware/flight_controller/pmu-lite.md
-      - 数传电台: hardware/flight_controller/telemetry.md
-      - 电调: hardware/flight_controller/esc.md
-      - 电机: hardware/flight_controller/motor.md
-      - RTK: hardware/flight_controller/rtk.md
-      - 激光雷达: hardware/flight_controller/lidar.md
-      - 舵机控制板: hardware/flight_controller/servo-controller.md
-      - 舵机投放器: hardware/flight_controller/servo-dispenser.md
-    - 电池: # battery
-      - 50PL_6S2P: hardware/battery/50PL_6S2P.md
-      - 格氏电池: hardware/battery/geshi_battery.md
-    - 机载计算机: # computer
-        - Jetson Orin NX: hardware/computer/jetson-orin-nx.md
-    - 电源树: # power_tree
-      - 电源树设计: hardware/power_tree/power-tree-design.md
-      - 电源树连接: hardware/power_tree/power-tree-connection.md
-    - 线路连接: # wiring
-      - 线路连接图: hardware/wiring/wiring-diagram.md
-      - 线路连接说明: hardware/wiring/wiring-instruction.md
-  - 机载计算机配置: # jetson
-    - 引导烧录: jetson/boot.md
-    - 系统安装: jetson/system-install.md
-    - ROS安装: jetson/ros-install.md
-    - 任务控制器: jetson/task-controller.md
-  - 软件功能包: # software/px4_controller
-    - 无人机状态机: software/px4_controller/state-machine.md
-    - PX4接口: software/px4_controller/px4-interface.md
-    - 瞄准与跟踪: software/px4_controller/aiming-tracking.md
-    - 侦察: software/px4_controller/detection.md
-    - 投放: software/px4_controller/throw.md
-    - 位置发布: software/px4_controller/position-publish.md
-  - 自定义地面站软件:
-    - QSQ Groundcontrol:
-      - 软件简介: software/QSQ_Groundcontrol/introduction.md
-      - 软件安装: software/QSQ_Groundcontrol/install.md
-      - 软件使用: software/QSQ_Groundcontrol/use.md
-      - 更新日志: software/QSQ_Groundcontrol/changelog.md
-      - 自定义开发: 
-        - 源码获取: software/QSQ_Groundcontrol/development.md
-        - 编译环境配置: software/QSQ_Groundcontrol/development-env.md
-        - 编译与运行: software/QSQ_Groundcontrol/development-build.md
-        - 打包与发行: software/QSQ_Groundcontrol/development-package.md
-    - 无人机控制台: software/upper_machine/drone-console.md
-    - 数据遥测: software/upper_machine/data-telemetry.md
