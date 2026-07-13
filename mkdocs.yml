@@ -73,10 +73,14 @@ nav:
     - 无人机飞控硬件:
       - CUAV X25 EVO: hardware/flight_controller/cuav-x25-evo.md
       - PMU Lite: hardware/flight_controller/pmu-lite.md
-      - 数传电台: hardware/flight_controller/telemetry.md
+      - 数传电台:
+        - P8 数传: hardware/flight_controller/telemetry-p8.md
+        - P9 数传: hardware/flight_controller/telemetry-p9.md
       - 电调: hardware/flight_controller/esc.md
       - 电机: hardware/flight_controller/motor.md
-      - RTK: hardware/flight_controller/rtk.md
+      - RTK:
+        - CUAV 2HP RTK: hardware/flight_controller/2hp-rtk.md
+        - CUAV 9PS RTK: hardware/flight_controller/9ps-rtk.md
       - 激光雷达: hardware/flight_controller/lidar.md
       - 舵机控制板: hardware/flight_controller/servo-controller.md
       - 舵机投放器: hardware/flight_controller/servo-dispenser.md
