@@ -70,6 +70,7 @@ nav:
     - 云台: mechanical/gimbal.md
     - 机载计算机: mechanical/onboard-computer.md
   - 硬件配置:
+    - 多旋翼接线: hardware/multirotor drone wiring/multirotor drone wiring.md
     - 无人机飞控硬件:
       - CUAV X25 EVO: hardware/flight_controller/cuav-x25-evo.md
       - PMU Lite: hardware/flight_controller/pmu-lite.md
