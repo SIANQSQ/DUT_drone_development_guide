@@ -96,7 +96,7 @@ nav:
       - 电源树设计: hardware/power_tree/power-tree-design.md
       - 电源树连接: hardware/power_tree/power-tree-connection.md
     - 线路连接:
-      - 线路连接说明: hardware/multirotor drone wiring/multirotor drone wiring.md
+      - 线路连接说明: hardware/wiring/wiring.md
   - 机载计算机配置:
     - 引导烧录: jetson/boot.md
     - 系统安装: jetson/system-install.md
