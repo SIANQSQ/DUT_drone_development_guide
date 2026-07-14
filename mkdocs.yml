@@ -5,7 +5,6 @@ site_name: DUT Drone Development Guide
 site_url: https://qsq.cool
 site_description: DUT Drone Development Guide
 site_author: DUT Aeromodelling Association - Shengqiao Qu
-site_favicon: favicon.ico
 
 # ============================================================
 # 仓库与编辑链接
@@ -55,6 +54,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
   logo: assets/logo.svg
+  favicon: favicon.ico
 
 # ============================================================
 # 导航结构
