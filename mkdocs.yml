@@ -72,21 +72,23 @@ nav:
   - 硬件配置:
     - 无人机飞控硬件:
       - CUAV X25 EVO: hardware/flight_controller/cuav-x25-evo.md
-      - PMU Lite: hardware/flight_controller/pmu-lite.md
-      - 数传电台:
-        - P8 数传: hardware/flight_controller/telemetry-p8.md
-        - P9 数传: hardware/flight_controller/telemetry-p9.md
-      - 电调: hardware/flight_controller/esc.md
-      - 电机: hardware/flight_controller/motor.md
+    - 数传电台:
+      - P8 数传: hardware/radio/telemetry-p8.md
+      - P9 数传: hardware/radio/telemetry-p9.md
+    - 传感器:
       - RTK:
         - CUAV 2HP RTK: hardware/flight_controller/2hp-rtk.md
         - CUAV 9PS RTK: hardware/flight_controller/9ps-rtk.md
       - 激光雷达: hardware/flight_controller/lidar.md
+    - 执行器:
       - 舵机控制板: hardware/flight_controller/servo-controller.md
       - 舵机投放器: hardware/flight_controller/servo-dispenser.md
-    - 电池:
-      - 50PL_6S2P: hardware/battery/50PL_6S2P.md
-      - 格氏电池: hardware/battery/geshi_battery.md
+      - 电调: hardware/flight_controller/esc.md
+      - 电机: hardware/flight_controller/motor.md
+    - 电源:
+      - PMU Lite: hardware/power/pmu-lite.md
+      - 50PL_6S2P: hardware/power/50PL_6S2P.md
+      - 格氏电池: hardware/power/geshi_battery.md 
     - 机载计算机:
         - Jetson Orin NX: hardware/computer/jetson-orin-nx.md
     - 电源树:
