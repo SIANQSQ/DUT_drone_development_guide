@@ -96,8 +96,8 @@ nav:
     - 线路连接:
       - 线路连接说明: hardware/wiring/wiring.md
   - 机载计算机配置:
-    - 引导烧录: jetson/boot.md
-    - 系统安装: jetson/system-install.md
+    - 引导烧录与系统安装: jetson/system-install.md
+    - 自定义系统镜像烧录: jetson/custom-image.md
     - ROS安装: jetson/ros-install.md
     - 任务控制器: jetson/task-controller.md
   - 软件功能包:
