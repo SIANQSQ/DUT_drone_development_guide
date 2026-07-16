@@ -7,7 +7,7 @@
 
 ### 1. 下载镜像与工具
 - 下载镜像：[`DUT_Jetson_Orin_NX_16G_Super.img`](http://storage.qsq.cool:5666/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/%E7%B3%BB%E7%BB%9F%E7%9B%98%E9%95%9C%E5%83%8F/DUT_Jetson_Orin_NX_16G_Super.img)
-- 下载烧录工具：**Win32DiskImager**
+- 下载烧录工具：[`Win32DiskImager`](http://storage.qsq.cool:5666/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/%E7%B3%BB%E7%BB%9F%E7%9B%98%E9%95%9C%E5%83%8F/win32diskimager-1.0.0-install.exe)
 
 ### 2. 将镜像写入硬盘
 - 格式化一块硬盘（确保无重要数据）。
