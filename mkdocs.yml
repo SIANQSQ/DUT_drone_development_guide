@@ -69,7 +69,6 @@ nav:
     - 机体结构: mechanical/airframe.md
     - 机载计算机: mechanical/onboard-computer.md
   - 硬件配置:
-    
     - 无人机飞控硬件:
       - CUAV X25 EVO: hardware/flight_controller/cuav-x25-evo.md
     - 数传电台:
@@ -115,10 +114,9 @@ nav:
       - 软件使用: software/QSQ_Groundcontrol/use.md
       - 更新日志: software/QSQ_Groundcontrol/changelog.md
       - 自定义开发:
-        - 源码获取: software/QSQ_Groundcontrol/development.md
-        - 编译环境配置: software/QSQ_Groundcontrol/development-env.md
-        - 编译与运行: software/QSQ_Groundcontrol/development-build.md
-        - 打包与发行: software/QSQ_Groundcontrol/development-package.md
+        - 编译与运行: software/QSQ_Groundcontrol/development/build.md
+        - 自定义功能扩展: software/QSQ_Groundcontrol/development/custom.md
+        - 打包与发行: software/QSQ_Groundcontrol/development/package.md
     - 无人机控制台: software/upper_machine/drone-console.md
     - 数据遥测: software/upper_machine/data-telemetry.md
 
