@@ -67,7 +67,6 @@ nav:
     - 实机: quickly_start/real_machine.md
   - 机械结构:
     - 机体结构: mechanical/airframe.md
-    - 云台: mechanical/gimbal.md
     - 机载计算机: mechanical/onboard-computer.md
   - 硬件配置:
     
