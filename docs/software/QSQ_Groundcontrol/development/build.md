@@ -81,6 +81,83 @@ Ninja 会并行编译所有目标。如需指定并行任务数，可加 `-j N`�
 
 ---
 
+## 构建 Release 安装程序
+
+如果当前 QGC 源码提供了 `tools/configure.py`，建议通过该脚本配置正式发布构建。以下命令使用独立的 `build-release` 目录，不会与前面的日常开发构建混用。
+
+### 1. 首次安装 NSIS
+
+NSIS 用于生成 Windows 安装程序，只需安装一次：
+
+```powershell
+winget install NSIS.NSIS
+```
+
+安装完成后，建议重新打开终端，确保 CMake 能找到 NSIS。
+
+### 2. 配置 Release 构建
+
+在 QGC 源码根目录打开 PowerShell，然后执行：
+
+```powershell
+python .\tools\configure.py `
+  -B .\build-release `
+  --release `
+  --qt-root 'C:\Qt\6.11.1\msvc2022_64'
+```
+
+如果需要明确使用 Python 3.14，可以将第一行改为：
+
+```powershell
+py -3.14 .\tools\configure.py `
+  -B .\build-release `
+  --release `
+  --qt-root 'C:\Qt\6.11.1\msvc2022_64'
+```
+
+> 请根据本机实际安装位置修改 `--qt-root`。Qt 套件必须与 MSVC 架构匹配，例如这里使用的是 64 位 `msvc2022_64`。
+
+### 3. 编译并生成安装程序
+
+```powershell
+cmake --build .\build-release --config Release --parallel
+cmake --install .\build-release --config Release
+```
+
+`cmake --build` 负责完成 Release 编译，`cmake --install` 会部署所需运行时文件，并在启用安装器的情况下生成 NSIS 安装程序。最终输出位置由项目的安装规则决定，可在命令输出或 `build-release` 目录中确认。
+
+---
+
+## 构建便携版（不生成安装程序）
+
+如果只需要部署后可直接运行的文件，而不需要 NSIS 安装程序，可关闭 `QGC_BUILD_INSTALLER`。下面的命令适用于 **CMD**：
+
+```batch
+cd /d D:\qgc
+
+py -3.14 tools\configure.py -B build-release-portable --release --qt-root "C:\Qt\6.11.1\msvc2022_64" -- -DQGC_BUILD_INSTALLER=OFF -DQGC_WINDOWS_REQUIRE_ADMIN=ON
+
+cmake --build build-release-portable --config Release --parallel
+cmake --install build-release-portable --config Release
+```
+
+参数说明：
+
+- `build-release-portable`：使用独立目录保存便携版构建结果。
+- `--`：其后的参数会直接传递给 CMake。
+- `-DQGC_BUILD_INSTALLER=OFF`：不生成安装程序。
+- `-DQGC_WINDOWS_REQUIRE_ADMIN=ON`：程序运行时请求管理员权限；如果不需要，可改为 `OFF`。
+
+如果使用 PowerShell，请将切换目录的命令改为：
+
+```powershell
+Set-Location D:\qgc
+```
+
+> `cd /d` 是 CMD 语法；PowerShell 不需要 `/d`。同样，CMD 使用 `^` 续行，而 PowerShell 使用反引号 `` ` `` 续行，请勿混用。
+
+---
+
 ## 额外说明与常见问题
 
 ### 1. 必须使用 MSVC 编译器？
@@ -114,8 +191,20 @@ Ninja 的增量编译很可靠，简单修改源码后直接 `ninja` 即可。
 
 ## 总结
 通过 Ninja 配合 MSVC 编译 QGC 的关键步骤：
+
 1. 在正确配置的 MSVC 环境中打开终端。
 2. 使用 CMake 指定 Ninja 生成器、编译器类型，并根据需要关闭 GStreamer。
 3. 执行 `ninja` 完成编译。
+4. 正式发布时使用 `tools/configure.py` 创建独立 Release 构建，再通过 `cmake --install` 部署运行时文件或生成安装程序。
 
 这种方式相较于 Visual Studio 工程，**命令行更轻量，构建速度更快**，非常适合持续集成和快速迭代开发。祝你编译顺利！
+
+# 总结：笔者使用的构建方式
+```bash
+cd /d D:\qgc
+
+py -3.14 tools\configure.py -B build-release-portable --release --qt-root "C:\Qt\6.11.1\msvc2022_64" -- -DQGC_BUILD_INSTALLER=OFF -DQGC_WINDOWS_REQUIRE_ADMIN=ON
+
+cmake --build build-release-portable --config Release --parallel
+cmake --install build-release-portable --config Release
+```
