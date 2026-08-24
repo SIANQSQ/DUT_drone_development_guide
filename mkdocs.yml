@@ -119,7 +119,7 @@ nav:
         - 打包与发行: software/QSQ_Groundcontrol/development/package.md
     - 无人机控制台: software/upper_machine/drone-console.md
     - 数据遥测: software/upper_machine/data-telemetry.md
-
+  - 后记: afterword.md
 # ============================================================
 # 插件配置
 # ============================================================
