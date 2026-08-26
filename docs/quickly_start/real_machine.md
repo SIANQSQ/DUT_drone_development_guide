@@ -23,7 +23,7 @@
 在进行实机飞行之前，请确保：
 
 - [ ] 已完成 [环境部署](./environment.md) 中的基础环境安装
-- [ ] 已安装 PX4-Autopilot 固件，可从以下链接下载：[固件源码下载](http://storage.qsq.cool:5666/%E8%88%AA%E6%A8%A1%E7%A4%BE/%E9%A3%9E%E6%8E%A7%E5%9B%BA%E4%BB%B6/%E5%9B%BA%E4%BB%B6%E6%BA%90%E7%A0%81)
+- [ ] 已安装 PX4-Autopilot 固件，可从以下链接下载：[固件源码下载](https://storage.qsq.cool/%E8%88%AA%E6%A8%A1%E7%A4%BE/%E9%A3%9E%E6%8E%A7%E5%9B%BA%E4%BB%B6/%E5%9B%BA%E4%BB%B6%E6%BA%90%E7%A0%81)
 - [ ] 已安装 ROS 与 MAVROS
 - [ ] 已确认所有硬件接线正确（参考 [线路连接说明](../hardware/wiring/wiring.md)）
 - [ ] 飞控已刷入正确固件并通过 QGroundControl 完成基础校准（罗盘、加速度计、水平等）

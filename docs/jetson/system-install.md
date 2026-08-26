@@ -6,15 +6,15 @@
 ### 1. 下载所需文件
 下载以下两个文件：
 
-- [`Tegra_Linux_Sample-Root-Filesystem_R35.6.1_aarch64.tbz2`](http://storage.qsq.cool:5666/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/Linux%E5%AE%98%E6%96%B9%E7%B3%BB%E7%BB%9F%E5%8C%85/35.6.1/Tegra_Linux_Sample-Root-Filesystem_R35.6.1_aarch64.tbz2)
+- [`Tegra_Linux_Sample-Root-Filesystem_R35.6.1_aarch64.tbz2`](https://storage.qsq.cool/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/Linux%E5%AE%98%E6%96%B9%E7%B3%BB%E7%BB%9F%E5%8C%85/35.6.1/Tegra_Linux_Sample-Root-Filesystem_R35.6.1_aarch64.tbz2)
 
 
-- [`Jetson_Linux_R35.6.1_aarch64.tbz2`](http://storage.qsq.cool:5666/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/Linux%E5%AE%98%E6%96%B9%E7%B3%BB%E7%BB%9F%E5%8C%85/35.6.1/Jetson_Linux_R35.6.1_aarch64.tbz2)
+- [`Jetson_Linux_R35.6.1_aarch64.tbz2`](https://storage.qsq.cool/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/Linux%E5%AE%98%E6%96%B9%E7%B3%BB%E7%BB%9F%E5%8C%85/35.6.1/Jetson_Linux_R35.6.1_aarch64.tbz2)
 
 ### 2. 配置虚拟机环境
 建议使用已配置好的虚拟机 **ROS_DUT**，或自行准备一台 **Ubuntu 20.04** 的虚拟机。
 
-已经配置好的虚拟机下载链接：[`ROS_DUT.zip`](http://storage.qsq.cool:5666/%E8%88%AA%E6%A8%A1%E7%A4%BE/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%95%9C%E5%83%8F/ROS-DUT.zip)
+已经配置好的虚拟机下载链接：[`ROS_DUT.zip`](https://storage.qsq.cool/%E8%88%AA%E6%A8%A1%E7%A4%BE/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%95%9C%E5%83%8F/ROS-DUT.zip)
 
 ### 3. 虚拟机操作步骤
 

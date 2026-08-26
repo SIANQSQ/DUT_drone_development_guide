@@ -3,11 +3,11 @@
 
 ## 烧写完整环境镜像
 为了减少系统安装与环境配置浪费的时间，笔者在配置好了第一台Jetson之后，将其磁盘内容打包成镜像，为后续其他电脑的环境配置带来了便利。
-镜像文件 [`DUT_Jetson_Orin_NX_16G_Super.img`](http://storage.qsq.cool:5666/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/%E7%B3%BB%E7%BB%9F%E7%9B%98%E9%95%9C%E5%83%8F/DUT_Jetson_Orin_NX_16G_Super.img) 已配置完所有环境，烧写后可直接用于 **cuadc** 比赛。
+镜像文件 [`DUT_Jetson_Orin_NX_16G_Super.img`](https://storage.qsq.cool/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/%E7%B3%BB%E7%BB%9F%E7%9B%98%E9%95%9C%E5%83%8F/DUT_Jetson_Orin_NX_16G_Super.img) 已配置完所有环境，烧写后可直接用于 **cuadc** 比赛。
 
 ### 1. 下载镜像与工具
-- 下载镜像：[`DUT_Jetson_Orin_NX_16G_Super.img`](http://storage.qsq.cool:5666/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/%E7%B3%BB%E7%BB%9F%E7%9B%98%E9%95%9C%E5%83%8F/DUT_Jetson_Orin_NX_16G_Super.img)
-- 下载烧录工具：[`Win32DiskImager`](http://storage.qsq.cool:5666/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/%E7%B3%BB%E7%BB%9F%E7%9B%98%E9%95%9C%E5%83%8F/win32diskimager-1.0.0-install.exe)
+- 下载镜像：[`DUT_Jetson_Orin_NX_16G_Super.img`](https://storage.qsq.cool/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/%E7%B3%BB%E7%BB%9F%E7%9B%98%E9%95%9C%E5%83%8F/DUT_Jetson_Orin_NX_16G_Super.img)
+- 下载烧录工具：[`Win32DiskImager`](https://storage.qsq.cool/%E8%88%AA%E6%A8%A1%E7%A4%BE/Jetson%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%B5%84%E6%96%99/%E7%B3%BB%E7%BB%9F%E7%9B%98%E9%95%9C%E5%83%8F/win32diskimager-1.0.0-install.exe)
 
 ### 2. 将镜像写入硬盘
 - 格式化一块硬盘（确保无重要数据）。

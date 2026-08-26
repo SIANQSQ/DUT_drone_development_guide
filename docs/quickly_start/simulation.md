@@ -14,7 +14,7 @@
 在进行仿真操作之前，请确保已完成以下准备工作：
 
 - [ ] 已完成 [环境部署](./environment.md) 中的基础环境安装
-- [ ] 已安装 PX4-Autopilot 固件（位于 `~/PX4_Firmware`），可从以下链接下载：[固件源码下载](http://storage.qsq.cool:5666/%E8%88%AA%E6%A8%A1%E7%A4%BE/%E9%A3%9E%E6%8E%A7%E5%9B%BA%E4%BB%B6/%E5%9B%BA%E4%BB%B6%E6%BA%90%E7%A0%81)
+- [ ] 已安装 PX4-Autopilot 固件（位于 `~/PX4_Firmware`），可从以下链接下载：[固件源码下载](https://storage.qsq.cool/%E8%88%AA%E6%A8%A1%E7%A4%BE/%E9%A3%9E%E6%8E%A7%E5%9B%BA%E4%BB%B6/%E5%9B%BA%E4%BB%B6%E6%BA%90%E7%A0%81)
 - [ ] 已安装 ROS 与 MAVROS
 - [ ] 已安装 Gazebo 仿真器
 
